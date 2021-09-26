@@ -1,0 +1,60 @@
+//Template styles
+
+.template-section {
+    background-color: #f4f4f9;
+    padding-bottom: 40px;
+    padding-top: 7px;
+
+    .template-top {
+        margin-left: 160px;
+        margin-right: 160px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .template-right {
+            display: flex;
+
+            .gallery-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: transparent;
+            }
+        }
+    }
+
+    .template-body {
+        margin-left: 140px;
+        margin-right: 160px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .card {
+            margin-left: 20px;
+            margin-top: 15px;
+
+            .card-image {
+                box-sizing: border-box;
+                height: 120px;
+                width: 140px;
+                cursor: pointer;
+                border-radius: 2px;
+                border: 0.2px solid #eaeaea;
+
+                &:hover {
+                    border: 1px solid #6c2594;
+                }
+            }
+
+            .card-title {
+                font-size: 14px;
+                margin-top: 2px;
+                color: #202124;
+                font-weight: 500;
+            }
+        }
+    }
+}
