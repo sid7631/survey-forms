@@ -37,15 +37,15 @@ const Template = () => {
             </div>
             <div className="template-body">
                 <div className="card" onClick={createForm}>
-                    <img src={blank} alt="no image" className='card-image' />
+                    <img src={blank}  className='card-image' />
                     <p className="card-title">Blank</p>
                 </div>
                 <div className="card">
-                    <img src={party} alt="no image" className='card-image' />
+                    <img src={party}  className='card-image' />
                     <p className="card-title">Party Invite</p>                
                 </div>
                 <div className="card">
-                    <img src={contact} alt="no image" className='card-image' />
+                    <img src={contact} className='card-image' />
                     <p className="card-title">Contact Information</p>                
                 </div>
 
