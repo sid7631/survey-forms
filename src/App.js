@@ -10,7 +10,7 @@ import QuestionForm from './components/Form/QuestionForm/QuestionForm';
 function App() {
   return (
     <div className="">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path='/form/:id'>
             <FormHeader />
