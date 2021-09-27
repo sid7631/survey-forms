@@ -14,7 +14,7 @@ const Header = () => {
                 <IconButton>
                 <MenuIcon />
                 </IconButton>
-                <img src={formImage} style={{height:'40px', width:'40px'}}  alt='no image' />
+                <img src={formImage} style={{height:'40px', width:'40px'}}  alt='form' />
                 <div className="info">
                     Forms
                 </div>

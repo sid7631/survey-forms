@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { Select, Switch, IconButton, Accordion, AccordionSummary, AccordionDetails, Button, Radio, FormControlLabel, Typography, MenuItem } from '@material-ui/core'
 import CropOriginalIcon from '@material-ui/icons/CropOriginal'
@@ -12,7 +12,7 @@ import OndemandVideoIcon from '@material-ui/icons/OndemandVideo'
 import TextFieldsIcon from '@material-ui/icons/TextFields'
 import CloseIcon from '@material-ui/icons/Close'
 import DragIndicatorIcon from '@material-ui/icons/DragIndicator'
-import { BsTrash, BsFileText } from 'react-icons/bs'
+import { BsTrash } from 'react-icons/bs'
 import { FcRightUp } from 'react-icons/fc'
 
 import './QuestionForm.scss'
@@ -242,7 +242,7 @@ const QuestionForm = () => {
                                                 {question.options.map((option, j) => (
                                                     <div className="add-question-body" key={j}>
                                                         {
-                                                            question.questionType != 'text' ?
+                                                            question.questionType !== 'text' ?
                                                                 <input type={question.questionType} style={{ marginRight: '10px' }} />
                                                                 :
                                                                 <ShortTextIcon style={{ marginRight: '10px' }} />
