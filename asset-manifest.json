@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/survey-forms/static/css/main.3b3d29f5.chunk.css",
+    "main.js": "/survey-forms/static/js/main.6afbb70e.chunk.js",
+    "main.js.map": "/survey-forms/static/js/main.6afbb70e.chunk.js.map",
+    "runtime-main.js": "/survey-forms/static/js/runtime-main.4fa2656a.js",
+    "runtime-main.js.map": "/survey-forms/static/js/runtime-main.4fa2656a.js.map",
+    "static/js/2.1495a1c4.chunk.js": "/survey-forms/static/js/2.1495a1c4.chunk.js",
+    "static/js/2.1495a1c4.chunk.js.map": "/survey-forms/static/js/2.1495a1c4.chunk.js.map",
+    "static/js/3.71bcd4bc.chunk.js": "/survey-forms/static/js/3.71bcd4bc.chunk.js",
+    "static/js/3.71bcd4bc.chunk.js.map": "/survey-forms/static/js/3.71bcd4bc.chunk.js.map",
+    "index.html": "/survey-forms/index.html",
+    "static/css/main.3b3d29f5.chunk.css.map": "/survey-forms/static/css/main.3b3d29f5.chunk.css.map",
+    "static/js/2.1495a1c4.chunk.js.LICENSE.txt": "/survey-forms/static/js/2.1495a1c4.chunk.js.LICENSE.txt",
+    "static/media/contact400.09c741d1.png": "/survey-forms/static/media/contact400.09c741d1.png",
+    "static/media/party-invite400.1987c137.png": "/survey-forms/static/media/party-invite400.1987c137.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4fa2656a.js",
+    "static/js/2.1495a1c4.chunk.js",
+    "static/css/main.3b3d29f5.chunk.css",
+    "static/js/main.6afbb70e.chunk.js"
+  ]
+}
