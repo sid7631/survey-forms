@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './components/Home';
 import Header from './components/Header';
 import Template from './components/Body/Template';
 import Body from './components/Body/Body';
