@@ -1,8 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import FormHeader from './components/Form/FormHeader';
-import CenteredTabs from './components/Form/CenteredTabs';
-import QuestionForm from './components/Form/QuestionForm/QuestionForm';
 import Home from './components/Home/';
 import Form from './components/Form';
 
