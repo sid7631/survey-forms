@@ -1,11 +1,10 @@
 import './App.css';
-import Header from './components/Header';
-import Template from './components/Body/Template';
-import Body from './components/Body/Body';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import FormHeader from './components/Form/FormHeader';
 import CenteredTabs from './components/Form/CenteredTabs';
 import QuestionForm from './components/Form/QuestionForm/QuestionForm';
+import Home from './components/Home/';
+import Form from './components/Form';
 
 function App() {
   return (
@@ -13,14 +12,10 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path='/form/:id'>
-            <FormHeader />
-            <CenteredTabs />
-            <QuestionForm />
+            <Form />
           </Route>
           <Route path='/'>
-            <Header />
-            <Template />
-            <Body />
+            <Home />
           </Route>
         </Switch>
       </Router>
