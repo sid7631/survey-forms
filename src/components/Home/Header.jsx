@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.scss'
+import './Header.scss'
 import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search'
 import AppsIcon from '@material-ui/icons/Apps'
