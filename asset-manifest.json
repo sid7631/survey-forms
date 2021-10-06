@@ -1,24 +1,22 @@
 {
   "files": {
-    "main.css": "/survey-forms/static/css/main.5368f9b0.chunk.css",
-    "main.js": "/survey-forms/static/js/main.d64a2b42.chunk.js",
-    "main.js.map": "/survey-forms/static/js/main.d64a2b42.chunk.js.map",
-    "runtime-main.js": "/survey-forms/static/js/runtime-main.4fa2656a.js",
-    "runtime-main.js.map": "/survey-forms/static/js/runtime-main.4fa2656a.js.map",
-    "static/js/2.a6854593.chunk.js": "/survey-forms/static/js/2.a6854593.chunk.js",
-    "static/js/2.a6854593.chunk.js.map": "/survey-forms/static/js/2.a6854593.chunk.js.map",
-    "static/js/3.71bcd4bc.chunk.js": "/survey-forms/static/js/3.71bcd4bc.chunk.js",
-    "static/js/3.71bcd4bc.chunk.js.map": "/survey-forms/static/js/3.71bcd4bc.chunk.js.map",
+    "main.css": "/survey-forms/static/css/main.6df7b08b.chunk.css",
+    "main.js": "/survey-forms/static/js/main.91afd8ec.chunk.js",
+    "main.js.map": "/survey-forms/static/js/main.91afd8ec.chunk.js.map",
+    "runtime-main.js": "/survey-forms/static/js/runtime-main.1c29665c.js",
+    "runtime-main.js.map": "/survey-forms/static/js/runtime-main.1c29665c.js.map",
+    "static/js/2.eee3ce88.chunk.js": "/survey-forms/static/js/2.eee3ce88.chunk.js",
+    "static/js/2.eee3ce88.chunk.js.map": "/survey-forms/static/js/2.eee3ce88.chunk.js.map",
+    "static/js/3.74901ace.chunk.js": "/survey-forms/static/js/3.74901ace.chunk.js",
+    "static/js/3.74901ace.chunk.js.map": "/survey-forms/static/js/3.74901ace.chunk.js.map",
     "index.html": "/survey-forms/index.html",
-    "static/css/main.5368f9b0.chunk.css.map": "/survey-forms/static/css/main.5368f9b0.chunk.css.map",
-    "static/js/2.a6854593.chunk.js.LICENSE.txt": "/survey-forms/static/js/2.a6854593.chunk.js.LICENSE.txt",
-    "static/media/contact400.09c741d1.png": "/survey-forms/static/media/contact400.09c741d1.png",
-    "static/media/party-invite400.1987c137.png": "/survey-forms/static/media/party-invite400.1987c137.png"
+    "static/css/main.6df7b08b.chunk.css.map": "/survey-forms/static/css/main.6df7b08b.chunk.css.map",
+    "static/js/2.eee3ce88.chunk.js.LICENSE.txt": "/survey-forms/static/js/2.eee3ce88.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4fa2656a.js",
-    "static/js/2.a6854593.chunk.js",
-    "static/css/main.5368f9b0.chunk.css",
-    "static/js/main.d64a2b42.chunk.js"
+    "static/js/runtime-main.1c29665c.js",
+    "static/js/2.eee3ce88.chunk.js",
+    "static/css/main.6df7b08b.chunk.css",
+    "static/js/main.91afd8ec.chunk.js"
   ]
 }
