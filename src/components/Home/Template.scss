@@ -3,15 +3,17 @@
 .template-section {
     background-color: #f4f4f9;
     padding-bottom: 40px;
-    padding-top: 7px;
+    padding-top: 40px;
 
     .template-top {
-        margin-left: 160px;
-        margin-right: 160px;
+        // margin-left: 160px;
+        // margin-right: 160px;
+        margin-left: 20px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
 
         .template-right {
             display: flex;
@@ -26,8 +28,8 @@
     }
 
     .template-body {
-        margin-left: 140px;
-        margin-right: 160px;
+        // margin-left: 140px;
+        // margin-right: 160px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -43,6 +45,7 @@
                 cursor: pointer;
                 border-radius: 2px;
                 border: 0.2px solid #eaeaea;
+                background: white;
 
                 &:hover {
                     border: 1px solid #6c2594;
@@ -56,5 +59,19 @@
                 font-weight: 500;
             }
         }
+    }
+
+
+    .template-summary{
+        margin-left: 140px;
+        margin-right: 160px;
+    }
+    
+    .gallery-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        font-size: 13px;
     }
 }

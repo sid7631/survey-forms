@@ -1,10 +1,9 @@
 import React from 'react'
 import './Header.scss'
-import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search'
 import AppsIcon from '@material-ui/icons/Apps'
 import { IconButton, Avatar } from '@material-ui/core'
-import formImage from '../../images/forms_2020q4_48dp.png'
+import { IoDocumentTextOutline } from 'react-icons/io5'
 
 
 const Header = () => {
@@ -12,17 +11,15 @@ const Header = () => {
         <div className='header'>
             <div className="header-info">
                 <IconButton>
-                <MenuIcon />
+                    <IoDocumentTextOutline color='#6E2594' />
                 </IconButton>
-                <img src={formImage} style={{height:'40px', width:'40px'}}  alt='form' />
                 <div className="info">
                     Forms
                 </div>
-                
+
             </div>
             <div className="header-search">
                 <IconButton><SearchIcon /></IconButton>
-                
                 <input type='text' name='search' placeholder='Search' />
             </div>
             <div className="header-right">
@@ -33,8 +30,6 @@ const Header = () => {
                     <Avatar src="" />
                 </IconButton>
             </div>
-
-
         </div>
     )
 }
