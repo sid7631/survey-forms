@@ -13,6 +13,7 @@ import { FormControlLabel, Typography } from '@material-ui/core'
 // import DragIndicatorIcon from '@material-ui/icons/DragIndicator'
 // import { BsTrash } from 'react-icons/bs'
 // import { FcRightUp } from 'react-icons/fc'
+import './QuestionForm/QuestionForm.scss'
 
 const ViewQuestions = ({ question, i }) => {
     if (question.open) {

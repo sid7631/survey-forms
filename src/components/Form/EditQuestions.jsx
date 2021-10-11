@@ -27,21 +27,6 @@ const EditQuestions = ({ question, i, changeQuestion, addQuestionType, changeOpt
                             value={question.questionText}
                             onChange={(e) => changeQuestion(e.target.value, i)}
                         />
-                        <CropOriginalIcon style={{ color: '#5f6368' }} />
-                        <Select className='select' style={{ color: '#5f6368', fontSize: '13px' }}>
-                            <MenuItem id='text' value='Text' className='menuitem' onClick={() => addQuestionType('text', i)}>
-                                <SubjectIcon style={{ marginRight: '10px' }} />
-                                Paragraph
-                            </MenuItem>
-                            <MenuItem id='checkbox' value='checkbox' className='menuitem' onClick={() => addQuestionType('checkbox', i)}>
-                                <CheckBoxIcon style={{ marginRight: '10px', color: '#70757a' }} checked />
-                                Checkboxes
-                            </MenuItem>
-                            <MenuItem id='radio' value='Radio' className='menuitem' onClick={() => addQuestionType('radio', i)}>
-                                <Radio style={{ marginRight: '10px', color: '#70757a' }} checked />
-                                Multiple Choices
-                            </MenuItem>
-                        </Select>
                     </div>
                     {question.options.map((option, j) => (
                         <div className="add-question-body" key={j}>
@@ -127,12 +112,12 @@ const EditQuestions = ({ question, i, changeQuestion, addQuestionType, changeOpt
                         </div>
                     </div>
                 </AccordionDetails>
-                <div className="question-edit">
+                {/* <div className="question-edit">
                     <AddCircleOutlineIcon className='edit' onClick={addMoreQuestionField} />
                     <OndemandVideoIcon className='edit' />
                     <CropOriginalIcon className='edit' />
                     <TextFieldsIcon className='edit' />
-                </div>
+                </div> */}
             </div>
         )
     }
