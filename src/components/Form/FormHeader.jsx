@@ -1,12 +1,8 @@
 import React from 'react'
 import './FormHeader.scss'
-import formImage from '../../images/forms_2020q4_48dp.png';
 import { FiStar, FiSettings } from 'react-icons/fi'
-import { AiOutlineEye } from 'react-icons/ai'
 import { IoMdFolderOpen } from 'react-icons/io'
-import { IconButton, Button, Avatar } from '@material-ui/core'
-import ColorLensIcon from '@material-ui/icons/ColorLens'
-import MoreVertIcon from '@material-ui/icons/MoreVert'
+import { IconButton, Avatar } from '@material-ui/core'
 import { IoDocumentTextOutline } from 'react-icons/io5'
 
 

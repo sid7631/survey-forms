@@ -1,24 +1,15 @@
 import React from 'react'
-// import CropOriginalIcon from '@material-ui/icons/CropOriginal'
-import { Button, FormControlLabel, IconButton, Divider, Switch } from '@material-ui/core'
-import CloseIcon from '@material-ui/icons/Close'
-// import ShortTextIcon from '@material-ui/icons/ShortText'
-import { BsTrash } from 'react-icons/bs'
-import { FcRightUp } from 'react-icons/fc'
-import FilterNoneIcon from '@material-ui/icons/FilterNone'
+import { Button, FormControlLabel, IconButton, Divider, Switch, Radio as RadioIcon  } from '@material-ui/core'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
 import DeleteIcon from '@material-ui/icons/Delete';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
-import { Radio as RadioIcon } from '@material-ui/core'
 
 
 const Radio = ({ question, i, changeQuestion, addQuestionType, changeOptionValue, removeOption, addOption, copyQuestion, deleteQuestion, requiredQuestion, addMoreQuestionField }) => {
     return (
         <>
             <div className="question-top">
-            {/* <div className='question-number'>{i + 1}.</div> */}
                 <input type="text"
                     className='question-text'
                     placeholder='Question'
@@ -29,7 +20,6 @@ const Radio = ({ question, i, changeQuestion, addQuestionType, changeOptionValue
             <div className='question-body'>
                 {question.options.map((option, j) => (
                     <div className="question-option" key={j}>
-                        {/* <input type={question.questionType} style={{ marginRight: '10px' }} disabled /> */}
                         <RadioIcon size='small'  disabled/>
                         <div>
                             <input
@@ -41,7 +31,6 @@ const Radio = ({ question, i, changeQuestion, addQuestionType, changeOptionValue
                             />
                         </div>
 
-                        {/* <CropOriginalIcon style={{ color: '#5f6368' }} /> */}
                         <IconButton aria-label='delete' onClick={() => removeOption(i, j)} style={{marginLeft:10}} >
                             <DeleteIcon fontSize='small' />
                         </IconButton>

@@ -1,12 +1,7 @@
-import { Button, Divider, IconButton, Switch } from '@material-ui/core'
+import { Divider, IconButton, Switch } from '@material-ui/core'
 import React from 'react'
-import { BsTrash } from 'react-icons/bs'
-import { FcRightUp } from 'react-icons/fc'
-import FilterNoneIcon from '@material-ui/icons/FilterNone'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
-import DeleteIcon from '@material-ui/icons/Delete';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 
 
@@ -14,7 +9,6 @@ const Text = ({ question, i, changeQuestion, addQuestionType, changeOptionValue,
     return (
         <>
             <div className="question-top">
-                {/* <div className='question-number'>{i + 1}.</div> */}
                 <input type="text"
                     className='question-text'
                     placeholder='Question'

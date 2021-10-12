@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { makeStyles, Paper, Tab, Tabs } from '@material-ui/core'
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import QuestionForm from './QuestionForm/QuestionForm';
 
 function TabPanel(props) {

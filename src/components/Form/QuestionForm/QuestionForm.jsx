@@ -1,20 +1,14 @@
 import React, { useState } from 'react'
 
-import { Accordion, AccordionDetails, AccordionSummary, Button, IconButton, makeStyles, Container } from '@material-ui/core'
+import { Accordion, AccordionDetails, AccordionSummary, makeStyles, Container } from '@material-ui/core'
 import DragIndicatorIcon from '@material-ui/icons/DragIndicator'
 import './QuestionForm.scss'
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
-import ViewQuestions from '../ViewQuestions'
-import EditQuestions from '../EditQuestions'
-import AddIcon from '@material-ui/icons/Add';
 import LongMenu from './LongMenu'
 import Text from './components/Text'
 import Radio from './components/Radio'
 import Checkbox from './components/Checkbox'
 import Fade from '@material-ui/core/Fade';
-import Zoom from '@material-ui/core/Zoom';
-import Grow from '@material-ui/core/Grow';
-import classNames from 'classnames'
 import ViewText from './components/ViewText'
 import ViewRadio from './components/ViewRadio'
 import ViewCheckbox from './components/ViewCheckbox'
@@ -57,9 +51,7 @@ const mockQuestions = [
 
 const useStyles = makeStyles(theme => ({
     root: {
-        backgroundColor: 'transparent'
-    },
-    root: {
+        backgroundColor: 'transparent',
         height: '100%',
     },
     container: {
@@ -143,7 +135,6 @@ const useStyles = makeStyles(theme => ({
             outline: 'none',
             color: 'black',
             height: 40,
-            lineHeight: 1,
             padding: 10,
             '&:focus': {
                 borderBottom: '1px solid rgb(103, 58, 183)',
@@ -250,7 +241,6 @@ const useStyles = makeStyles(theme => ({
             outline: 'none',
             color: 'black',
             height: 40,
-            lineHeight: 1,
             padding: 10,
             '&:focus': {
                 borderBottom: '1px solid rgb(103, 58, 183)',
@@ -455,7 +445,6 @@ const QuestionForm = () => {
                                 {...provider.droppableProps}
                                 ref={provider.innerRef}
                             >
-                                {/* {questionsUI()} */}
                                 {questions.map((question, i) => (
                                     <Draggable key={i} draggableId={i + 'id'} index={i}>
                                         {(provider, snapshot) => (
@@ -543,14 +532,10 @@ const ViewHandler = (props) => {
         switch (props.question.questionType) {
             case 'text':
                 return <ViewText {...props} />
-                break;
             case 'radio':
                 return <ViewRadio {...props} />
-                break;
             case 'checkbox':
                 return <ViewCheckbox  {...props} />
-                break;
-
             default:
                 return ''
         }
@@ -565,14 +550,10 @@ const EditHandler = (props) => {
         switch (props.question.questionType) {
             case 'text':
                 return <Text {...props} />
-                break;
             case 'radio':
                 return <Radio {...props} />
-                break;
             case 'checkbox':
                 return <Checkbox  {...props} />
-                break;
-
             default:
                 return ''
         }

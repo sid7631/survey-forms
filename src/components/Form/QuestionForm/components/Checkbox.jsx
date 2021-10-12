@@ -1,17 +1,9 @@
 import React from 'react'
-// import CropOriginalIcon from '@material-ui/icons/CropOriginal'
-import { Button, FormControlLabel, IconButton , Divider, Switch} from '@material-ui/core'
-import CloseIcon from '@material-ui/icons/Close'
-// import ShortTextIcon from '@material-ui/icons/ShortText'
-import { BsTrash } from 'react-icons/bs'
-import { FcRightUp } from 'react-icons/fc'
-import FilterNoneIcon from '@material-ui/icons/FilterNone'
+import { Button, FormControlLabel, IconButton , Divider, Switch, Checkbox as CheckBoxIcon} from '@material-ui/core'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
 import DeleteIcon from '@material-ui/icons/Delete';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
-import {Checkbox as CheckBoxIcon} from '@material-ui/core';
 
 const Checkbox = ({ question, i, changeQuestion, addQuestionType, changeOptionValue, removeOption, addOption, copyQuestion, deleteQuestion, requiredQuestion, addMoreQuestionField }) => {
     return (

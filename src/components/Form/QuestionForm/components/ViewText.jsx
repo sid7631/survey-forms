@@ -8,7 +8,6 @@ const ViewText = ({ question, i }) => {
     return (
         <>
             <div className="question-top">
-                {/* <div className='question-number'>{i + 1}.</div> */}
                 <div
                     className='question-text'
                 >
