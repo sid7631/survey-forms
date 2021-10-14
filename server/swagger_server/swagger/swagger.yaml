@@ -1,0 +1,283 @@
+openapi: 3.0.0
+info:
+  title: Survey Tool
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /form:
+    post:
+      description: Add a new form
+      operationId: form_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/form_body'
+      responses:
+        "200":
+          description: The form has been created
+        "500":
+          description: This is an 500 unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_500'
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+  /form/answer:
+    get:
+      operationId: form_answer_get
+      parameters:
+      - name: formId
+        in: query
+        description: form id to query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: 123abc
+      responses:
+        "200":
+          description: This is the answers submitted to the form
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+        "500":
+          description: This is an 500 unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_500'
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+    post:
+      description: Submit Form Answer
+      operationId: form_answer_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/form_answer_body'
+      responses:
+        "200":
+          description: Submitted answers
+        "500":
+          description: This is an 500 unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_500'
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+components:
+  schemas:
+    Form:
+      type: object
+      properties:
+        type:
+          type: string
+          example: checkbox
+        text:
+          type: string
+          example: Enter your question
+        options:
+          type: array
+          items:
+            $ref: '#/components/schemas/Form_options'
+        open:
+          type: boolean
+          example: false
+        required:
+          type: boolean
+          example: true
+    FormMeta:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Untitled Form
+        owner:
+          type: string
+          example: userABC
+        lastUpdate:
+          type: string
+          example: 12-12-2020
+        active:
+          type: boolean
+          example: true
+    Answer:
+      type: object
+      properties:
+        type:
+          type: string
+          example: checkbox
+        text:
+          type: string
+          example: Enter your question
+        options:
+          type: array
+          items:
+            $ref: '#/components/schemas/Answer_options'
+        answers:
+          example:
+          - Option 1
+          - Option 2
+    AnswerMeta:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Untitled Form
+        submitBy:
+          type: string
+          example: userABC
+        submitOn:
+          type: string
+          example: 12-12-2020
+    AnswerQuery:
+      type: object
+      properties:
+        type:
+          type: string
+          example: checkbox
+        text:
+          type: string
+          example: Enter your question
+        options:
+          type: array
+          items:
+            $ref: '#/components/schemas/Answer_options'
+        answers:
+          example:
+          - Option 1
+          - Option 2
+      example:
+        options:
+        - text: option 1
+        - text: option 1
+        answers:
+        - Option 1
+        - Option 2
+        text: Enter your question
+        type: checkbox
+    AnswerQueryMeta:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Untitled Form
+        responses:
+          type: integer
+          example: 3
+      example:
+        name: Untitled Form
+        responses: 3
+    form_body:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Form'
+        metaData:
+          $ref: '#/components/schemas/FormMeta'
+    inline_response_500:
+      type: object
+      properties:
+        code:
+          type: string
+          example: "500"
+        message:
+          type: string
+          example: This is an unexpected error
+    inline_response_200:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AnswerQuery'
+        metaData:
+          $ref: '#/components/schemas/AnswerQueryMeta'
+      example:
+        metaData:
+          name: Untitled Form
+          responses: 3
+        data:
+        - options:
+          - text: option 1
+          - text: option 1
+          answers:
+          - Option 1
+          - Option 2
+          text: Enter your question
+          type: checkbox
+        - options:
+          - text: option 1
+          - text: option 1
+          answers:
+          - Option 1
+          - Option 2
+          text: Enter your question
+          type: checkbox
+    form_answer_body:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Answer'
+        metaData:
+          $ref: '#/components/schemas/AnswerMeta'
+    Form_options:
+      properties:
+        option:
+          type: string
+          example: k
+    Answer_options:
+      properties:
+        text:
+          type: string
+          example: option 1
+      example:
+        text: option 1
+  responses:
+    "500API":
+      description: This is an 500 unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_response_500'
+  parameters:
+    PageNumber:
+      name: pageNumber
+      in: query
+      description: page number to return
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: integer
+        example: 1
+    PageSize:
+      name: pageSize
+      in: query
+      description: number of results in the page
+      required: false
+      style: form
+      explode: true
+      schema:
+        maximum: 100
+        type: integer
+        example: 1
+    FormId:
+      name: formId
+      in: query
+      description: form id to query
+      required: true
+      style: form
+      explode: true
+      schema:
+        type: string
+        example: 123abc
+
