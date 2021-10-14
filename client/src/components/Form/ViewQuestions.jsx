@@ -1,18 +1,6 @@
 import React from 'react'
 import { FormControlLabel, Typography } from '@material-ui/core'
-// import CropOriginalIcon from '@material-ui/icons/CropOriginal'
-// import CheckBoxIcon from '@material-ui/icons/CheckBox'
-// import ShortTextIcon from '@material-ui/icons/ShortText'
-// import SubjectIcon from '@material-ui/icons/Subject'
-// import MoreVertIcon from '@material-ui/icons/MoreVert'
-// import FilterNoneIcon from '@material-ui/icons/FilterNone'
-// import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline'
-// import OndemandVideoIcon from '@material-ui/icons/OndemandVideo'
-// import TextFieldsIcon from '@material-ui/icons/TextFields'
-// import CloseIcon from '@material-ui/icons/Close'
-// import DragIndicatorIcon from '@material-ui/icons/DragIndicator'
-// import { BsTrash } from 'react-icons/bs'
-// import { FcRightUp } from 'react-icons/fc'
+import './QuestionForm/QuestionForm.scss'
 
 const ViewQuestions = ({ question, i }) => {
     if (question.open) {
