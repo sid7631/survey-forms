@@ -8,7 +8,7 @@ paths:
   /form:
     post:
       description: Add a new form
-      operationId: form_post
+      operationId: formPOST
       requestBody:
         content:
           application/json:
@@ -23,10 +23,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/inline_response_500'
-      x-openapi-router-controller: swagger_server.controllers.default_controller
+      x-swagger-router-controller: Default
   /form/answer:
     get:
-      operationId: form_answer_get
+      operationId: formAnswerGET
       parameters:
       - name: formId
         in: query
@@ -50,10 +50,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/inline_response_500'
-      x-openapi-router-controller: swagger_server.controllers.default_controller
+      x-swagger-router-controller: Default
     post:
       description: Submit Form Answer
-      operationId: form_answer_post
+      operationId: formAnswerPOST
       requestBody:
         content:
           application/json:
@@ -68,7 +68,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/inline_response_500'
-      x-openapi-router-controller: swagger_server.controllers.default_controller
+      x-swagger-router-controller: Default
 components:
   schemas:
     Form:
@@ -280,4 +280,3 @@ components:
       schema:
         type: string
         example: 123abc
-
